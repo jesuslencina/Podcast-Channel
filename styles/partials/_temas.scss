@@ -1,0 +1,59 @@
+.temas{
+    margin-top: 3rem;
+    h2{
+    padding-left: $padding;
+    
+    span{
+        display: block;
+    }
+
+    }
+    .topicos{
+        margin-top: 2.3rem;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        div{
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            margin-top: 3rem;
+            h3{
+                font-size: 24px;
+                text-align: center;
+                font-weight: 700;
+                span{
+                    display: block;
+
+                }
+            }
+        }
+    }
+   
+}
+
+@media screen and (min-width: $breakpoint1){
+    .temas{
+  
+        h2{
+            padding-left: $padding-desktop;
+            span{
+                display: inline;
+            }
+        }
+        .topicos{
+            margin-left: $padding-desktop;
+            margin-right: $padding-desktop;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            div{
+                padding-left: 4.88rem;
+                padding-right: 4.88rem;
+                
+                h3{
+                    height: 4rem;
+                }
+            }
+        }
+    }
+}

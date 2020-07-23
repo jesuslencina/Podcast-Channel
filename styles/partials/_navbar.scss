@@ -1,0 +1,131 @@
+$altura-icono: 1.5rem;
+$altura-barra: 2.75rem;
+$altura-item: 3.125rem;
+.barra {
+  background-color: white;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  height: $altura-barra;
+  //LOGO
+  img {
+    padding: $padding;
+    width: $altura-icono;
+    height: $altura-icono;
+  }
+
+  //LISTA
+  ul {
+    display: none;
+    position: absolute;
+    right: 0px;
+    top: $altura-barra + 0.625rem;
+    list-style: none;
+    a {
+      text-decoration: none;
+      font-family: $fuente-mono;
+      color: white;
+      background-color: $color1;
+      width: 100vw;
+      height: $altura-item;
+      display: flex;
+      align-items: center;
+
+      li {
+        padding-left: $padding;
+      }
+    }
+  }
+
+  //MENU HAMBURGUESA
+  .activador-menu {
+    position: relative;
+    height: $altura-icono;
+    input {
+      padding: $padding;
+      position: absolute;
+      right: 0px;
+      z-index: 4;
+      height: $altura-icono;
+      width: $altura-icono;
+      opacity: 0;
+
+      &:checked ~ ul {
+        display: flex;
+        flex-flow: column wrap;
+      }
+
+      &:checked ~ .fa-bars {
+        opacity: 0;
+      }
+
+      &:checked ~ .fa-times {
+        opacity: 1;
+      }
+    }
+
+    .fas {
+      padding: $padding;
+      position: absolute;
+      right: 0px;
+      height: $altura-icono;
+      width: $altura-icono;
+      font-size: $altura-icono;
+    }
+
+    .fa-bars {
+      z-index: 3;
+    }
+
+    .fa-times {
+      z-index: 2;
+      opacity: 0;
+    }
+  }
+}
+
+//VERSION DESKTOP
+@media screen and (min-width: $breakpoint1) {
+  .barra {
+    //LOGO
+    img {
+      padding-left: $padding-desktop / 2;
+      width: $altura-icono + 0.75rem;
+      height: $altura-icono + 0.75rem;
+    }
+
+    //LISTA
+    ul {
+      top: $padding;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      width: 45vw;
+
+      a {
+        background-color: white;
+        width: fit-content;
+        height: $altura-barra;
+        li {
+          padding-left: 0px;
+          color: black;
+
+          &:hover {
+            text-decoration: line-through;
+            color: $color3;
+          }
+
+          &:visited {
+            text-decoration: line-through;
+          }
+        }
+      }
+    }
+    .activador-menu {
+      i,
+      input {
+        display: none;
+      }
+    }
+  }
+}

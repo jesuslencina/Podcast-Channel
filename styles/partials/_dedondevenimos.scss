@@ -1,0 +1,31 @@
+.dedondevenimos{
+    display: flex;
+    flex-flow: column wrap;
+    top: 230px;
+    padding-left: $padding;
+    img{
+        width: 90vw;
+    }   
+    h2 , p{
+        margin-top: 27px; 
+        max-width: 90vw;
+    }
+}
+
+@media screen and (min-width: 800px){
+    .dedondevenimos{
+        justify-content: center;
+        align-self:baseline;
+        flex-flow: row wrap;
+        img{
+            width: 30%;
+        }
+        div{
+            width: 40%;
+            align-self: center;
+            p{
+                max-width: 70%;
+            }
+        }
+    }
+}

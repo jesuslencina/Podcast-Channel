@@ -1,0 +1,356 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: white;
+}
+
+h1, h2 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 200;
+  font-size: 36px;
+}
+
+p {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.boton {
+  background-color: #00F3BB;
+  width: 288px;
+  height: 48px;
+  border: none;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 36px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: medium;
+  font-weight: 500;
+}
+
+.boton:hover {
+  background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+  color: white;
+}
+
+.fondo {
+  background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  z-index: -1;
+  -webkit-transform: skewY(-6deg);
+          transform: skewY(-6deg);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+@media screen and (min-width: 800px) {
+  .boton {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin-top: 56px;
+    width: 226px;
+  }
+  .fondo {
+    height: 145%;
+  }
+  h2 {
+    font-size: 48px;
+  }
+  p {
+    line-height: 24px;
+  }
+}
+
+.barra {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 44px;
+}
+
+.barra img {
+  padding: 16px;
+  width: 24px;
+  height: 24px;
+}
+
+.barra ul {
+  display: none;
+  position: absolute;
+  right: 0px;
+  top: 54px;
+  list-style: none;
+}
+
+.barra ul a {
+  text-decoration: none;
+  font-family: "IBM Plex Mono", monospace;
+  color: white;
+  background-color: #0000EC;
+  width: 100vw;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.barra ul a li {
+  padding-left: 20px;
+}
+
+.barra .activador-menu {
+  position: relative;
+  height: 24px;
+}
+
+.barra .activador-menu input {
+  padding: 16px;
+  position: absolute;
+  right: 0px;
+  z-index: 4;
+  height: 24px;
+  width: 24px;
+  opacity: 0;
+}
+
+.barra .activador-menu input:checked ~ ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+
+.barra .activador-menu input:checked ~ .fa-bars {
+  opacity: 0;
+}
+
+.barra .activador-menu input:checked ~ .fa-times {
+  opacity: 1;
+}
+
+.barra .activador-menu .fas {
+  padding: 16px;
+  position: absolute;
+  right: 0px;
+  height: 24px;
+  width: 24px;
+  font-size: 24px;
+}
+
+.barra .activador-menu .fa-bars {
+  z-index: 3;
+}
+
+.barra .activador-menu .fa-times {
+  z-index: 2;
+  opacity: 0;
+}
+
+@media screen and (min-width: 800px) {
+  .barra img {
+    padding-left: 100px;
+    width: 36px;
+    height: 36px;
+  }
+  .barra ul {
+    top: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 45vw;
+    margin-right: 100px;
+  }
+  .barra ul a {
+    background-color: white;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 44px;
+  }
+  .barra ul a li {
+    padding-left: 0px;
+    color: black;
+  }
+  .barra .activador-menu i, .barra .activador-menu input {
+    display: none;
+  }
+}
+
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  margin-top: 29px;
+  padding: 16px;
+}
+
+.hero h1 {
+  font-size: 36px;
+}
+
+.hero h1 span {
+  color: #0000EC;
+}
+
+.hero h1 span:first-child {
+  color: black;
+  display: block;
+}
+
+.hero p {
+  margin-top: 16px;
+}
+
+@media screen and (min-width: 800px) {
+  .hero {
+    padding-left: 164px;
+    padding-top: 100px;
+  }
+  .hero h1 {
+    font-size: 64px;
+  }
+  .hero h1 span:first-child {
+    display: inline;
+  }
+  .hero p {
+    max-width: 32.85vw;
+    text-align: justify;
+  }
+}
+
+.episodios {
+  position: relative;
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+
+.episodios h2 {
+  color: white;
+  padding-left: 16px;
+  padding-top: 0px;
+}
+
+.episodios div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+
+.episodios div iframe {
+  padding: 16px;
+}
+
+@media screen and (min-width: 800px) {
+  .episodios {
+    margin-top: 100px;
+  }
+  .episodios h2 {
+    padding-left: 164px;
+  }
+  .episodios div {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding-left: 100px;
+  }
+  .episodios div iframe {
+    width: 40vw;
+  }
+}
+
+.dedondevenimos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  top: 230px;
+  padding-left: 16px;
+}
+
+.dedondevenimos img {
+  width: 90vw;
+}
+
+.dedondevenimos h2, .dedondevenimos p {
+  margin-top: 27px;
+  max-width: 90vw;
+}
+
+@media screen and (min-width: 800px) {
+  .dedondevenimos {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-item-align: baseline;
+        align-self: baseline;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
+  .dedondevenimos img {
+    width: 30%;
+  }
+  .dedondevenimos div {
+    width: 40%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .dedondevenimos div p {
+    max-width: 70%;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

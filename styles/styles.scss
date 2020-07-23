@@ -1,0 +1,39 @@
+//SELECTORES X CLASE
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background-color: white;
+}
+
+//IMPORTAR VARIABLES
+@import 'partials/variables';
+
+//IMPORTAR ESTILOS DE ELEMENTOS COMUNES
+@import 'partials/elementos';
+
+//IMPORTAR NAVBAR
+@import 'partials/navbar';
+
+//HERO
+@import 'partials/hero';
+
+//EPISODIOS
+@import 'partials/episodios';
+
+//DE DONDE VENIMOS
+@import 'partials/dedondevenimos';
+
+//INVITADES ESTELARES
+@import 'partials/invitades';
+
+//TOPICOS
+@import'partials/temas';
+
+//MENSAJE FINAL
+@import 'partials/mensajefinal';
+
+//FOOTER
+@import 'partials/footer';

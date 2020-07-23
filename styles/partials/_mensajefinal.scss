@@ -1,0 +1,39 @@
+.mensajefinal {
+  height: 25rem;
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    font-weight: 300;
+  }
+
+  button {
+    margin-top: 0px;
+  }
+
+  .fondo {
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+    height: 100%;
+    padding: 0px;
+  }
+}
+
+@media screen and (min-width: $breakpoint1) {
+  .mensajefinal {
+    height: 40rem;
+    button {
+      width: 21.56rem;
+      align-self: center;
+      margin-top: 2.25rem;
+    }
+    .fondo {
+      clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+}

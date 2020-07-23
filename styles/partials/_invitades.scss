@@ -1,0 +1,36 @@
+.invitades{
+    margin-top: 3.375rem;
+
+    h2{
+        padding-left: $padding;
+    }
+
+    div{
+        display: flex;
+        flex-flow: column wrap;
+        margin-top: 0.625rem;
+        img{
+            width: 100vw;
+        }
+    }
+}
+
+@media screen and (min-width: $breakpoint1){
+    .invitades{
+        h2{
+            padding-left: $padding-desktop;
+        }
+
+        div{
+    
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+
+            img{
+                width: 100%;
+                
+            }
+        }
+    }
+}

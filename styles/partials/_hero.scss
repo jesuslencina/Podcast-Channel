@@ -1,0 +1,42 @@
+.hero {
+  display: flex;
+  flex-flow: column wrap;
+  margin-top: 29px;
+  padding: $padding;
+  h1 {
+    font-size: 36px;
+
+    span {
+      color: $color1;
+      &:first-child {
+        color: black;
+        display: block;
+      }
+    }
+  }
+
+  p {
+    margin-top: $padding;
+  }
+}
+
+@media screen and (min-width: $breakpoint1) {
+  .hero {
+    padding-left: $padding-desktop;
+    padding-top: $padding-desktop;
+    h1 {
+      font-size: 64px;
+
+      span {
+        &:first-child {
+          display: inline;
+        }
+      }
+    }
+
+    p{
+      max-width: 39.25rem;
+      text-align: justify;
+    }
+  }
+}

@@ -1,0 +1,605 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: white;
+}
+
+h1, h2, h3 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 200;
+  font-size: 36px;
+}
+
+p {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.boton {
+  background-color: #00F3BB;
+  width: 18rem;
+  height: 3rem;
+  border: none;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 2.25rem;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: medium;
+  font-weight: 500;
+}
+
+.boton:hover {
+  background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+  color: white;
+}
+
+.fondo {
+  background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+@media screen and (min-width: 800px) {
+  .boton {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin-top: 3.5rem;
+    width: 14.125rem;
+  }
+  .fondo {
+    height: 145%;
+  }
+  h2 {
+    font-size: 48px;
+  }
+  p {
+    line-height: 24px;
+  }
+}
+
+.barra {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 2.75rem;
+}
+
+.barra img {
+  padding: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.barra ul {
+  display: none;
+  position: absolute;
+  right: 0px;
+  top: 3.375rem;
+  list-style: none;
+}
+
+.barra ul a {
+  text-decoration: none;
+  font-family: "IBM Plex Mono", monospace;
+  color: white;
+  background-color: #0000EC;
+  width: 100vw;
+  height: 3.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.barra ul a li {
+  padding-left: 1rem;
+}
+
+.barra .activador-menu {
+  position: relative;
+  height: 1.5rem;
+}
+
+.barra .activador-menu input {
+  padding: 1rem;
+  position: absolute;
+  right: 0px;
+  z-index: 4;
+  height: 1.5rem;
+  width: 1.5rem;
+  opacity: 0;
+}
+
+.barra .activador-menu input:checked ~ ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+
+.barra .activador-menu input:checked ~ .fa-bars {
+  opacity: 0;
+}
+
+.barra .activador-menu input:checked ~ .fa-times {
+  opacity: 1;
+}
+
+.barra .activador-menu .fas {
+  padding: 1rem;
+  position: absolute;
+  right: 0px;
+  height: 1.5rem;
+  width: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.barra .activador-menu .fa-bars {
+  z-index: 3;
+}
+
+.barra .activador-menu .fa-times {
+  z-index: 2;
+  opacity: 0;
+}
+
+@media screen and (min-width: 800px) {
+  .barra img {
+    padding-left: 6.25rem;
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+  .barra ul {
+    top: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 45vw;
+  }
+  .barra ul a {
+    background-color: white;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 2.75rem;
+  }
+  .barra ul a li {
+    padding-left: 0px;
+    color: black;
+  }
+  .barra ul a li:hover {
+    text-decoration: line-through;
+    color: #00F3BB;
+  }
+  .barra ul a li:visited {
+    text-decoration: line-through;
+  }
+  .barra .activador-menu i,
+  .barra .activador-menu input {
+    display: none;
+  }
+}
+
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  margin-top: 29px;
+  padding: 1rem;
+}
+
+.hero h1 {
+  font-size: 36px;
+}
+
+.hero h1 span {
+  color: #0000EC;
+}
+
+.hero h1 span:first-child {
+  color: black;
+  display: block;
+}
+
+.hero p {
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 800px) {
+  .hero {
+    padding-left: 12.5rem;
+    padding-top: 12.5rem;
+  }
+  .hero h1 {
+    font-size: 64px;
+  }
+  .hero h1 span:first-child {
+    display: inline;
+  }
+  .hero p {
+    max-width: 39.25rem;
+    text-align: justify;
+  }
+}
+
+.episodios {
+  position: relative;
+  margin-top: 1.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+
+.episodios h2 {
+  color: white;
+  padding-left: 1rem;
+  padding-top: 0px;
+}
+
+.episodios div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+
+.episodios div iframe {
+  padding: 1rem;
+}
+
+.episodios .fondo {
+  padding: 0px;
+  height: 120%;
+  -webkit-transform: skewY(-6deg);
+          transform: skewY(-6deg);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+@media screen and (min-width: 800px) {
+  .episodios {
+    margin-top: 6.25rem;
+  }
+  .episodios h2 {
+    padding-left: 12.5rem;
+  }
+  .episodios div {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding-left: 12.5rem;
+  }
+  .episodios div iframe {
+    width: 40vw;
+  }
+  .episodios .fondo {
+    height: 145%;
+  }
+}
+
+.dedondevenimos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  top: 230px;
+  padding-left: 1rem;
+}
+
+.dedondevenimos img {
+  width: 90vw;
+}
+
+.dedondevenimos h2, .dedondevenimos p {
+  margin-top: 27px;
+  max-width: 90vw;
+}
+
+@media screen and (min-width: 800px) {
+  .dedondevenimos {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-item-align: baseline;
+        align-self: baseline;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
+  .dedondevenimos img {
+    width: 30%;
+  }
+  .dedondevenimos div {
+    width: 40%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .dedondevenimos div p {
+    max-width: 70%;
+  }
+}
+
+.invitades {
+  margin-top: 3.375rem;
+}
+
+.invitades h2 {
+  padding-left: 1rem;
+}
+
+.invitades div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  margin-top: 0.625rem;
+}
+
+.invitades div img {
+  width: 100vw;
+}
+
+@media screen and (min-width: 800px) {
+  .invitades h2 {
+    padding-left: 12.5rem;
+  }
+  .invitades div {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+  .invitades div img {
+    width: 100%;
+  }
+}
+
+.temas {
+  margin-top: 3rem;
+}
+
+.temas h2 {
+  padding-left: 1rem;
+}
+
+.temas h2 span {
+  display: block;
+}
+
+.temas .topicos {
+  margin-top: 2.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.temas .topicos div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 3rem;
+}
+
+.temas .topicos div h3 {
+  font-size: 24px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.temas .topicos div h3 span {
+  display: block;
+}
+
+@media screen and (min-width: 800px) {
+  .temas h2 {
+    padding-left: 12.5rem;
+  }
+  .temas h2 span {
+    display: inline;
+  }
+  .temas .topicos {
+    margin-left: 12.5rem;
+    margin-right: 12.5rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .temas .topicos div {
+    padding-left: 4.88rem;
+    padding-right: 4.88rem;
+  }
+  .temas .topicos div h3 {
+    height: 4rem;
+  }
+}
+
+.mensajefinal {
+  height: 25rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mensajefinal h2 {
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  font-weight: 300;
+}
+
+.mensajefinal button {
+  margin-top: 0px;
+}
+
+.mensajefinal .fondo {
+  -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+  height: 100%;
+  padding: 0px;
+}
+
+@media screen and (min-width: 800px) {
+  .mensajefinal {
+    height: 40rem;
+  }
+  .mensajefinal button {
+    width: 21.56rem;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-top: 2.25rem;
+  }
+  .mensajefinal .fondo {
+    -webkit-clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+.footer {
+  background-color: white;
+  height: 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1px;
+}
+
+.footer p {
+  padding: 1rem;
+}
+
+.footer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer div a {
+  color: black;
+  text-decoration: none;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer div a i {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media screen and (min-width: 800px) {
+  .footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .footer p {
+    justify-self: flex-start;
+    padding: 0px;
+    padding-left: 6.25rem;
+  }
+  .footer div {
+    justify-self: flex-end;
+    padding-right: 6.25rem;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
