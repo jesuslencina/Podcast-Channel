@@ -34,10 +34,10 @@
     }
     div {
       flex-flow: row wrap;
-      padding-left: 6.25rem * 1.5;
+      justify-content: center;
       iframe {
         width: 40vw;
-        
+        display: block;
       }
     }
     

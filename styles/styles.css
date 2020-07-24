@@ -307,10 +307,13 @@ p {
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
-    padding-left: 9.375rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .episodios div iframe {
     width: 40vw;
+    display: block;
   }
   .episodios .fondo {
     height: 145%;
