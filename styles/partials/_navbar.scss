@@ -1,6 +1,6 @@
 $altura-icono: 1.5rem;
 $altura-barra: 2.75rem;
-$altura-item: 3.125rem;
+$altura-item: 14rem / 4;
 .barra {
   background-color: white;
   display: flex;
@@ -20,19 +20,21 @@ $altura-item: 3.125rem;
     position: absolute;
     right: 0px;
     top: $altura-barra + 0.625rem;
-    list-style: none;
-    a {
-      text-decoration: none;
-      font-family: $fuente-mono;
-      color: white;
-      background-color: $color1;
+    background-color: $color1;
+    li {
+     
+      
       width: 100vw;
       height: $altura-item;
       display: flex;
       align-items: center;
 
-      li {
+      a {
         padding-left: $padding;
+        text-decoration: none;
+        font-family: $fuente-mono;
+        color: white;
+        list-style: none;
       }
     }
   }
@@ -101,15 +103,15 @@ $altura-item: 3.125rem;
       flex-flow: row wrap;
       justify-content: space-around;
       width: 45vw;
-
-      a {
+      background-color: white;
+      li {
         background-color: white;
         width: fit-content;
         height: $altura-barra;
-        li {
+
+        a {
           padding-left: 0px;
           color: black;
-
           &:hover {
             text-decoration: line-through;
             color: $color3;

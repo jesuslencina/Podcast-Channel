@@ -34,8 +34,7 @@
     }
     div {
       flex-flow: row wrap;
-      align-self: center;
-      padding-left: $padding-desktop;
+      padding-left: 6.25rem * 1.5;
       iframe {
         width: 40vw;
         

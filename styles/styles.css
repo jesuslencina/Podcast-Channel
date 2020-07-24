@@ -36,6 +36,7 @@ p {
 .boton:hover {
   background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
   color: white;
+  cursor: pointer;
 }
 
 .fondo {
@@ -90,16 +91,12 @@ p {
   position: absolute;
   right: 0px;
   top: 3.375rem;
-  list-style: none;
+  background-color: #0000EC;
 }
 
-.barra ul a {
-  text-decoration: none;
-  font-family: "IBM Plex Mono", monospace;
-  color: white;
-  background-color: #0000EC;
+.barra ul li {
   width: 100vw;
-  height: 3.125rem;
+  height: 3.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -108,8 +105,12 @@ p {
           align-items: center;
 }
 
-.barra ul a li {
+.barra ul li a {
   padding-left: 1rem;
+  text-decoration: none;
+  font-family: "IBM Plex Mono", monospace;
+  color: white;
+  list-style: none;
 }
 
 .barra .activador-menu {
@@ -181,23 +182,24 @@ p {
     -ms-flex-pack: distribute;
         justify-content: space-around;
     width: 45vw;
+    background-color: white;
   }
-  .barra ul a {
+  .barra ul li {
     background-color: white;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     height: 2.75rem;
   }
-  .barra ul a li {
+  .barra ul li a {
     padding-left: 0px;
     color: black;
   }
-  .barra ul a li:hover {
+  .barra ul li a:hover {
     text-decoration: line-through;
     color: #00F3BB;
   }
-  .barra ul a li:visited {
+  .barra ul li a:visited {
     text-decoration: line-through;
   }
   .barra .activador-menu i,
@@ -305,10 +307,7 @@ p {
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    padding-left: 12.5rem;
+    padding-left: 9.375rem;
   }
   .episodios div iframe {
     width: 40vw;
